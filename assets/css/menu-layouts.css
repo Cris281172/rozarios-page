@@ -94,10 +94,10 @@
 
 .menu-layout .menu .list-disable.active {
     display: block;
-    border-top: 0;
     animation: test 0.5s;
     padding: 25px 30px;
     border: 1.5px solid #f0f0f0;
+    border-top: 0;
 
 }
 

@@ -26,27 +26,34 @@ const slidesWrapper = document.querySelector('.slider .slides-wrapper ');
 
 document.addEventListener("DOMContentLoaded", e => {
     let number = null;
-    const windowWith = window.innerWidth;
-    if(windowWith >= 1200){
-        number = 3;
+    let imageWidth = 0;
+    let fullWidth = 0;
+
+    const scaleImages = () => {
+        const windowWith = window.innerWidth;
+
+        if(windowWith > 1200){
+            number = 3;
+        }
+
+        else if(windowWith <= 1200 && windowWith >= 850){
+            number = 2;
+        }
+        else if(windowWith < 850){
+            number = 1;
+        }
+
+        imageWidth = window.innerWidth / number;
+
+        fullWidth = document.querySelectorAll('.slides-wrapper img').length * imageWidth
+
+        slidesWrapper.style.width = `${fullWidth}px`;
+        [...document.querySelectorAll('.slides-wrapper img')].forEach(img => img.style.width = `${imageWidth}px`)
     }
-    else if(windowWith <= 1200 && windowWith >= 850){
-        number = 2;
-    }
-    else{
-        number = 1;
-    }
-    console.log()
-    console.log(number)
 
-    let imageWidth = window.innerWidth / number;
+    scaleImages();
 
-    const fullWidth = document.querySelectorAll('.slides-wrapper img').length * imageWidth
-
-    slidesWrapper.style.width = `${fullWidth}px`;
-    [...document.querySelectorAll('.slides-wrapper img')].forEach(img => img.style.width = `${imageWidth}px`)
-
-
+    window.addEventListener('resize', scaleImages)
 
     const rightMoveSlider = (e) => {
 
@@ -77,14 +84,13 @@ document.addEventListener("DOMContentLoaded", e => {
             translateX = parseInt(translateX);
         }
 
-        console.log(translateX)
-        console.log(-1 * fullWidth / 2)
+        console.log(fullWidth)
 
         if(translateX < 0){
             slidesWrapper.style.transform = `translateX(${translateX + imageWidth}px)`;
         }
         else{
-            slidesWrapper.style.transform = `translateX(${(-1 * fullWidth / 2) - 3 * imageWidth}px)`;
+            slidesWrapper.style.transform = `translateX(${(-1 * fullWidth + number * imageWidth)}px)`;
         }
     }
 
