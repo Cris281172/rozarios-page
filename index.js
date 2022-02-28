@@ -21,4 +21,4 @@ app.get('/lokalizacja', (req, res) => {
     res.render('localization')
 })
 
-app.listen('8080', () => console.log('Server listening on port 8080'));
+app.listen(process.env.PORT);
