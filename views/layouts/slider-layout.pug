@@ -1,0 +1,30 @@
+link(rel="stylesheet" href="/css/slider-layout.css")
+
+
+mixin imgItem(screen)
+    img(src=`${screen}` class="slide" alt="slide")
+
+div.slider
+    div.slides-wrapper
+        +imgItem('../images/slide1.jpg')
+        +imgItem('../images/slide2.jpg')
+        +imgItem('../images/slide3.jpg')
+        +imgItem('../images/slide4.jpg')
+        +imgItem('../images/slide5.jpg')
+        +imgItem('../images/slide6.jpg')
+        +imgItem('../images/slide7.jpg')
+        +imgItem('../images/slide8.jpg')
+        +imgItem('../images/slide9.jpg')
+        +imgItem('../images/slide10.jpg')
+        +imgItem('../images/slide11.jpg')
+        +imgItem('../images/slide12.jpg')
+        +imgItem('../images/slide13.jpg')
+        +imgItem('../images/slide14.jpg')
+        +imgItem('../images/slide15.jpg')
+
+
+    button(class="arrow left") <
+    button(class="arrow right") >
+
+
+script(src="../js/slider.js")

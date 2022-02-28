@@ -1,0 +1,14 @@
+mixin listItem(link, itemText, data)
+    li.item
+        a(href=`${link}` class="link" data=`${data}`) #{itemText}
+
+nav.main-nav
+    ul.nav-list
+        +listItem('/', 'Strona główna', '')
+        +listItem('/menu', 'Menu', 'menu')
+        +listItem('/w-srodku', 'W środku', 'w-srodku')
+        +listItem('/lokalizacja', 'Lokalizacja', 'lokalizacja')
+    button(class="menu-bar" id="menu-bar")
+        i(class='fa fa-bars')
+
+script(src="../js/nav.js")

@@ -1,0 +1,24 @@
+extends layouts/deafult.pug
+
+block pageTitle
+    title Rozario's Steakhouse
+    meta(name="description" content="Free Web tutorials")
+block styles
+    link(rel="stylesheet" href="/css/main.css")
+
+block headerContent
+    div.header-wrapper
+        div.header-content
+            h1.title  Rozarios's Steakhouse
+            p.text W "Steakhouse Rozarios" można zjeść najlepsze w Łodzi steki. Wszystkie dania przygotowane są na bieżąco, z najwyższej jakości składników.
+            div.header-nav
+                a(href='/menu' class="link") Menu
+                a(href='/lokalizacja' class="link") Lokalizacja
+block menuContent
+    include layouts/menu-layout
+
+block sliderContent
+    include layouts/slider-layout
+
+block informationContent
+    include layouts/information-layout

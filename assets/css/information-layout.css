@@ -1,0 +1,64 @@
+.information-section {
+    max-width: 1256px;
+    color: #f0f0f0;
+    display: flex;
+    margin: 75px auto;
+}
+
+.information-section .chef-image-wrapper {
+    margin-right: 50px;
+    position: relative;
+    margin-top: 50px;
+    height: 100%;
+}
+
+.information-section .chef-image-wrapper:after {
+    position: absolute;
+    content: "Szef Kuchnii";
+    bottom: 5px;
+    right: 5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+
+
+.information-section .chef-image-wrapper .chef-image {
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid #919191;
+}
+
+.information-section .article-information .title{
+    text-align: right;
+    font-size: 80px;
+    font-weight: bold;
+    color: #bbbbbb;
+}
+.information-section .article-information .paragraph{
+    font-size: 22px;
+    margin-top: 50px;
+    line-height: 26px;
+}
+
+@media(max-width: 1300px){
+    .information-section {
+        margin: 75px 50px;
+    }
+}
+
+@media(max-width: 900px){
+    .information-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .information-section .chef-image-wrapper {
+        margin-right: 0;
+        order: 2;
+    }
+}
+
+@media(max-width: 500px){
+    .information-section {
+        margin: 74px 20px;
+    }
+}

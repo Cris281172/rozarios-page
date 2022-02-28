@@ -1,0 +1,14 @@
+.opening-hours {
+    background-color: #afa79b;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.opening-hours .content {
+    font-size: 18px;
+}
+
+.opening-hours .content .welcome {
+    margin-left: 5px;
+    font-weight: bold;
+}
