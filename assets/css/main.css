@@ -74,7 +74,6 @@ a {
 
 .main-header .main-nav {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 35px 0;
     position: relative;
 
 }
@@ -82,11 +81,14 @@ a {
 .main-header .main-nav .nav-list {
     display: flex;
     justify-content: center;
+
 }
 
 .main-header .main-nav .nav-list.menu-active {
     right: 0;
     margin-top: 15px;
+    padding: 45px 0;
+
 }
 
 
@@ -145,7 +147,7 @@ a {
 .main-header .main-nav .menu-bar {
     position: absolute;
     top: 0;
-    right: 10px;
+    left: 10px;
     font-size: 50px;
     color: #f0f0f0;
     background: transparent;

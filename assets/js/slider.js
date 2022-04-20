@@ -4,26 +4,6 @@ const leftArrow = document.querySelector('.arrow.left')
 
 const slidesWrapper = document.querySelector('.slider .slides-wrapper ');
 
-// let number = 0;
-// const sliderMoveRight = () => {
-//     console.log('test')
-//     const activeSlides = document.querySelectorAll('.slide.active');
-//     const currentIndex = slides.indexOf(activeSlides[2]);
-//     activeSlides[0].classList.remove('active');
-//     if(slides[currentIndex + 1]){
-//         slides[currentIndex + 1].classList.add('active');
-//     }
-//     else{
-//         slides[number].classList.add('active');
-//
-//         number++;
-//     }
-// }
-//
-//
-// rightArrow.addEventListener('click', sliderMoveRight)
-//
-
 document.addEventListener("DOMContentLoaded", e => {
     let number = null;
     let imageWidth = 0;
