@@ -27,7 +27,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #000;
+    background-color: rgba(40, 40, 40, 0.83);
     border: none;
     color: #f0f0f0;
     border-radius: 50%;
@@ -46,6 +46,10 @@
 }
 
 @media(max-width: 860px){
+    .slider .arrow{
+        font-size: 30px;
+        padding: 5px 10px;
+    }
     .slider .slides-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
